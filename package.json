@@ -1,0 +1,21 @@
+{
+  "name": "mocha_api_automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tests": "mocha tests/ --reporter mochawesome",
+    "tests:createUser": "mocha tests/createUser.js --reporter mochawesome",
+    "tests:getUser": "mocha tests/getUser.js --reporter mochawesome",
+    "tests:updateUser": "mocha tests/updateUser.js --reporter mochawesome",
+    "tests:deleteUser": "mocha tests/deleteUser.js --reporter mochawesome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "chai": "^6.2.0",
+    "mocha": "^11.7.4",
+    "mochawesome": "^7.1.4"
+  }
+}

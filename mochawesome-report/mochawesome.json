@@ -1,0 +1,274 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-19T15:57:01.951Z",
+    "end": "2025-10-19T15:57:03.727Z",
+    "duration": 1776,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c369988c-0455-44b4-a586-014207c7c2b8",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6b47eaae-68be-47e0-a9a2-662c1374efbe",
+          "title": "POST - Create User",
+          "fullFile": "/Users/elsa.fauzia/Documents/qa_enginner_digial_skola/mocha_api_automation/tests/createUser.js",
+          "file": "/tests/createUser.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create User Successfully",
+              "fullTitle": "POST - Create User Create User Successfully",
+              "timedOut": false,
+              "duration": 342,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const requestBody = {\n  name: \"elsa farah\",\n  job: \"QA\",\n};\nconst response = await fetch(\"https://reqres.in/api/users\", {\n  method: \"POST\",\n  headers: {\n    \"x-api-key\": \"reqres-free-v1\",\n    \"Content-Type\": \"application/json\",\n  },\n  body: JSON.stringify(requestBody),\n});\nconst responseData = await response.json();\nconsole.log(responseData);\nexpect(response.status).to.equal(201);\nexpect(responseData.name).to.equal(requestBody.name);\nexpect(responseData.job).to.equal(requestBody.job);\nexpect(responseData.id).to.exist;\nexpect(responseData.createdAt).to.not.be.null;",
+              "err": {},
+              "uuid": "b50cb56d-4e17-481c-99c8-d60d1aba2751",
+              "parentUUID": "6b47eaae-68be-47e0-a9a2-662c1374efbe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b50cb56d-4e17-481c-99c8-d60d1aba2751"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 342,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "64b1c316-30df-45d5-8607-9e660ef54049",
+          "title": "DELETE - Delete User",
+          "fullFile": "/Users/elsa.fauzia/Documents/qa_enginner_digial_skola/mocha_api_automation/tests/deleteUser.js",
+          "file": "/tests/deleteUser.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Delete User Successfully",
+              "fullTitle": "DELETE - Delete User Delete User Successfully",
+              "timedOut": false,
+              "duration": 196,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\", {\n  method: \"DELETE\",\n  headers: {\n    \"x-api-key\": \"reqres-free-v1\",\n    \"Content-Type\": \"application/json\",\n  },\n});\nconsole.log(\"Status Code:\", response.status);\nexpect(response.status).to.equal(204);",
+              "err": {},
+              "uuid": "9b60c289-9afc-4ce4-a83d-485bc4b73d90",
+              "parentUUID": "64b1c316-30df-45d5-8607-9e660ef54049",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete User with Invalid API Key",
+              "fullTitle": "DELETE - Delete User Delete User with Invalid API Key",
+              "timedOut": false,
+              "duration": 242,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/\", {\n  method: \"DELETE\",\n  headers: {\n    \"x-api-key\": \"unkown\",\n    \"Content-Type\": \"application/json\",\n  },\n});\nconsole.log(\"Status Code:\", response.status);\nexpect(response.status).to.equal(403);",
+              "err": {},
+              "uuid": "36f6f5ad-d35b-4e9e-b531-f2970eda5869",
+              "parentUUID": "64b1c316-30df-45d5-8607-9e660ef54049",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9b60c289-9afc-4ce4-a83d-485bc4b73d90",
+            "36f6f5ad-d35b-4e9e-b531-f2970eda5869"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 438,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "290da177-454f-4dba-8427-4d8b40e79963",
+          "title": "GET - Get User List",
+          "fullFile": "/Users/elsa.fauzia/Documents/qa_enginner_digial_skola/mocha_api_automation/tests/getUser.js",
+          "file": "/tests/getUser.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get Multiple List Users",
+              "fullTitle": "GET - Get User List Get Multiple List Users",
+              "timedOut": false,
+              "duration": 251,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users?page=2\", {\n  headers: {\n    \"x-api-key\": \"reqres-free-v1\",\n    \"Content-Type\": \"application/json\",\n  },\n});\nconst responseData = await response.json();\nconsole.log(responseData);\nexpect(response.status).to.equal(200);\nexpect(responseData.page).to.equal(2);\nexpect(responseData.per_page).to.equal(6);\nexpect(responseData.total).to.equal(12);\nexpect(responseData.total_pages).to.equal(2);\nresponseData.data.forEach((user) => {\n  expect(user.id).to.be.a(\"number\");\n  expect(user.email).to.be.a(\"string\").and.include(\"@reqres.in\");\n  expect(user.first_name).to.be.a(\"string\");\n  expect(user.last_name).to.be.a(\"string\");\n  expect(user.avatar).to.match(/^https?:\\/\\/[^\\s$.?#].[^\\s]*$/);\n});",
+              "err": {},
+              "uuid": "435b73b2-ac41-4244-867c-e75e31d15866",
+              "parentUUID": "290da177-454f-4dba-8427-4d8b40e79963",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get Single User",
+              "fullTitle": "GET - Get User List Get Single User",
+              "timedOut": false,
+              "duration": 44,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/2\", {\n  headers: {\n    \"x-api-key\": \"reqres-free-v1\",\n    \"Content-Type\": \"application/json\",\n  },\n});\nconst responseData = await response.json();\nconsole.log(responseData);\nexpect(response.status).to.equal(200);\nexpect(responseData.data.email).to.equal(\"janet.weaver@reqres.in\");\nexpect(responseData.data.first_name).to.equal(\"Janet\");\nexpect(responseData.data.last_name).to.equal(\"Weaver\");\nexpect(responseData.data.avatar).to.equal(\n  \"https://reqres.in/img/faces/2-image.jpg\"\n);",
+              "err": {},
+              "uuid": "d08fbeeb-4d34-4a9b-9f16-cc286f5f8399",
+              "parentUUID": "290da177-454f-4dba-8427-4d8b40e79963",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get Single User with Invalid ID",
+              "fullTitle": "GET - Get User List Get Single User with Invalid ID",
+              "timedOut": false,
+              "duration": 487,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await fetch(\"https://reqres.in/api/users/elsa\", {\n  headers: {\n    \"x-api-key\": \"reqres-free-v1\",\n    \"Content-Type\": \"application/json\",\n  },\n});\nconsole.log(\"Status Code:\", response.status);\nexpect(response.status).to.equal(404);",
+              "err": {},
+              "uuid": "c5a35b99-3884-4f18-9bd0-bb476f716b91",
+              "parentUUID": "290da177-454f-4dba-8427-4d8b40e79963",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "435b73b2-ac41-4244-867c-e75e31d15866",
+            "d08fbeeb-4d34-4a9b-9f16-cc286f5f8399",
+            "c5a35b99-3884-4f18-9bd0-bb476f716b91"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 782,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "a7b5e4a0-021d-43d2-8591-eea1234850b9",
+          "title": "UPDATE - Update User",
+          "fullFile": "/Users/elsa.fauzia/Documents/qa_enginner_digial_skola/mocha_api_automation/tests/updateUser.js",
+          "file": "/tests/updateUser.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Update User Successfully",
+              "fullTitle": "UPDATE - Update User Update User Successfully",
+              "timedOut": false,
+              "duration": 204,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const requestBody = {\n  name: \"momo\",\n  job: \"Software Engineer\",\n};\nconst response = await fetch(\"https://reqres.in/api/users/2\", {\n  method: \"PATCH\",\n  headers: {\n    \"x-api-key\": \"reqres-free-v1\",\n    \"Content-Type\": \"application/json\",\n  },\n  body: JSON.stringify(requestBody),\n});\nconst responseData = await response.json();\nconsole.log(responseData);\nexpect(response.status).to.equal(200);\nexpect(responseData.name).to.equal(requestBody.name);\nexpect(responseData.job).to.equal(requestBody.job);\nexpect(responseData.updatedAt).to.not.be.null;",
+              "err": {},
+              "uuid": "a21c55b1-4555-45d8-aa81-cd626d9bb6f1",
+              "parentUUID": "a7b5e4a0-021d-43d2-8591-eea1234850b9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a21c55b1-4555-45d8-aa81-cd626d9bb6f1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 204,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.4"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.0"
+    }
+  }
+}
