@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 
-describe("UPDATE - Update User", () => {
+describe("PATCH - Update User", () => {
   it("Update User Successfully", async () => {
     const requestBody = {
       name: "momo",
