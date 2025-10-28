@@ -1,7 +1,6 @@
 {
   "name": "mocha_api_automation",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "tests": "mocha tests/ --reporter mochawesome",
     "tests:createUser": "mocha tests/createUser.js --reporter mochawesome",
@@ -9,10 +8,8 @@
     "tests:updateUser": "mocha tests/updateUser.js --reporter mochawesome",
     "tests:deleteUser": "mocha tests/deleteUser.js --reporter mochawesome"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Elsa Farah Fauzia",
+  "description": "API automation testing project built with Selenium WebDriver, Mocha, and Chai",
   "devDependencies": {
     "chai": "^6.2.0",
     "mocha": "^11.7.4",

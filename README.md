@@ -34,14 +34,14 @@ mocha_api_automation/
 
 ## ⚙️ Tech Stack
 
-| Tool            | Purpose                                  |
-| :-------------- | :--------------------------------------- |
-| **JavaScript**  | Test scripting language                  |
-| **Mocha**       | Test framework for Node.js               |
-| **Chai**        | BDD assertion library                    |
-| **Mochawesome** | Professional HTML & JSON reporting       |
-| **Node.js**     | JavaScript runtime environment           |
-| **ReqRes API**  | RESTful API service for testing          |
+| Tool            | Purpose                            |
+| :-------------- | :--------------------------------- |
+| **JavaScript**  | Test scripting language            |
+| **Mocha**       | Test framework for Node.js         |
+| **Chai**        | BDD assertion library              |
+| **Mochawesome** | Professional HTML & JSON reporting |
+| **Node.js**     | JavaScript runtime environment     |
+| **ReqRes API**  | RESTful API service for testing    |
 
 ## 🚀 How to Run the Tests
 
@@ -84,15 +84,15 @@ npm run tests:deleteUser
 
 **7 tests passed - 100% success rate**
 
-| Method | Test Case          | Endpoint            | Status |
-| :----- | :----------------- | :------------------ | :----- |
+| Method | Test Case          | Endpoint            | Status  |
+| :----- | :----------------- | :------------------ | :------ |
 | POST   | Create User        | `/api/users`        | ✅ PASS |
 | GET    | Get Multiple Users | `/api/users?page=2` | ✅ PASS |
 | GET    | Get Single User    | `/api/users/2`      | ✅ PASS |
 | GET    | Invalid User ID    | `/api/users/elsa`   | ✅ PASS |
 | PATCH  | Update User        | `/api/users/2`      | ✅ PASS |
 | DELETE | Delete User        | `/api/users/2`      | ✅ PASS |
-| DELETE | Invalid API Key    | `/api/users/`       | ✅ PASS |
+| DELETE | Invalid API Key    | `/api/users`        | ✅ PASS |
 
 ## 📈 Test Report Screenshot
 

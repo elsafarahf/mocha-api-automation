@@ -15,7 +15,7 @@ describe("DELETE - Delete User", () => {
   });
 
   it("Delete User with Invalid API Key", async () => {
-    const response = await fetch("https://reqres.in/api/users/", {
+    const response = await fetch("https://reqres.in/api/users", {
       method: "DELETE",
       headers: {
         "x-api-key": "unkown",
